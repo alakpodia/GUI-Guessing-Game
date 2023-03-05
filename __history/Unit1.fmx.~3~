@@ -1,0 +1,50 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 268
+  ClientWidth = 487
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object TitleLabel: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'TitleLabel'
+    TabOrder = 0
+  end
+  object NumbersEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Position.X = 32.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ConfirmButton: TButton
+    Position.X = 384.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Confirm'
+  end
+  object HelperLabel: TLabel
+    Position.X = 32.000000000000000000
+    Position.Y = 208.000000000000000000
+    Text = 'HelperLabel'
+    TabOrder = 3
+  end
+  object CounterLabel: TLabel
+    Position.X = 384.000000000000000000
+    Position.Y = 32.000000000000000000
+    Text = 'CounterLabel'
+    TabOrder = 4
+  end
+end

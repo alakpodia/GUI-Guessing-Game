@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+
+bool isNumberEntered = false;
+int guessNumber;
+
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	TitleLabel->Text = "Please Enter a Number: ";
+	CounterLabel->Text = "0";
+	HelperLabel->Text= "";
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::ConfirmButtonClick(TObject *Sender)
+{
+	if(!isNumberEntered){
+		guessNumber = NumbersEdit->Text.ToInt();
+		isNumberEntered = true;
+		TitleLabel->Text = "Now Guess the Number!!!";
+        NumbersEdit->Text = "";
+	}else{
+		int secondUsersNumber = NumbersEdit->Text.ToInt();
+		if (secondUsersNumber== guessNumber) {
+			HelperLabel->Text = "You Won!! CONGRATULATIONS!!";
+		}
+    }
+
+}
+//---------------------------------------------------------------------------
